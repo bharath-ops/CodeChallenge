@@ -1,0 +1,465 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    overflow: scroll;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/*align content vertically*/
+.Container {
+    display: flex;
+    flex-direction: column;
+}
+
+    .Container > div {
+        padding: 30px;
+    }
+
+.error {
+    color: red
+}
+
+.drpClass {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+    .drpClass div {
+        padding: 10px;
+    }
+
+.BandLabelText {
+    font-weight: 600;
+    color: darkslategray;
+}
+
+.resistorBlock {
+    align-self: center;
+    text-align: center;
+    align-content: center;
+}
+
+.resultClass {
+    align-self: center;
+    text-align: center;
+    align-content: center;
+    vertical-align: bottom;
+    font-size: 50px;
+    font-weight: bold;
+    color: darkslategray;
+    display: flex;
+}
+
+
+
+.resistor {
+    flex-grow: 2;
+    text-align: center;
+}
+
+    .resistor > * {
+        margin-right: -0.3em;
+        display: inline-block;
+        background-color: burlywood;
+        width: 70px;
+        height: 100px;
+    }
+
+    .resistor .wire {
+        width: 60px;
+        height: 15px;
+        margin-bottom: 45px;
+        background-color: silver;
+    }
+
+
+
+    .resistor .left {
+        width: 35px;
+        height: 100px;
+        border-radius: 100% / 50%;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+
+    .resistor .right {
+        width: 35px;
+        height: 100px;
+        border-radius: 100% / 50%;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+
+
+    .resistor .leftconnector {
+        border-bottom: 10px solid white;
+        border-top: 10px solid white;
+        border-left: 25px solid burlywood;
+        height: 100px;
+        width: 0;
+    }
+
+    .resistor .rightconnector {
+        border-bottom: 10px solid white;
+        border-top: 10px solid white;
+        border-right: 25px solid burlywood;
+        height: 100px;
+        width: 0;
+    }
+
+    .resistor .band1 {
+        position: relative;
+        height: 100px;
+        width: 40px;
+    }
+
+        .resistor .band1:after {
+            content: ' ';
+            position: absolute;
+            left: 1em;
+            width: 20px;
+            height: 100px;
+        }
+
+        .resistor .band1.black:after {
+            background-color: black;
+        }
+
+        .resistor .band1.brown:after {
+            background-color: brown;
+        }
+
+        .resistor .band1.red:after {
+            background-color: red;
+        }
+
+        .resistor .band1.orange:after {
+            background-color: orange;
+        }
+
+        .resistor .band1.yellow:after {
+            background-color: yellow;
+        }
+
+        .resistor .band1.green:after {
+            background-color: green;
+        }
+
+        .resistor .band1.blue:after {
+            background-color: blue;
+        }
+
+        .resistor .band1.violet:after {
+            background-color: violet;
+        }
+
+        .resistor .band1.gray:after {
+            background-color: gray;
+        }
+
+        .resistor .band1.white:after {
+            background-color: white;
+        }
+
+        .resistor .band1.gold:after {
+            background-color: gold;
+        }
+
+        .resistor .band1.silver:after {
+            background-color: silver;
+        }
+
+        .resistor .band1.pink:after {
+            background-color: pink;
+        }
+
+    .resistor .band {
+        position: relative;
+        width: 65px;
+        height: 80px;
+        margin-bottom: 10px;
+    }
+
+        .resistor .band:after {
+            content: ' ';
+            position: absolute;
+            left: .3em;
+            width: 20px;
+            height: 80px;
+        }
+
+        .resistor .band.black:after {
+            background-color: black;
+        }
+
+        .resistor .band.brown:after {
+            background-color: brown;
+        }
+
+        .resistor .band.red:after {
+            background-color: red;
+        }
+
+        .resistor .band.orange:after {
+            background-color: orange;
+        }
+
+        .resistor .band.yellow:after {
+            background-color: yellow;
+        }
+
+        .resistor .band.green:after {
+            background-color: green;
+        }
+
+        .resistor .band.blue:after {
+            background-color: blue;
+        }
+
+        .resistor .band.violet:after {
+            background-color: violet;
+        }
+
+        .resistor .band.gray:after {
+            background-color: gray;
+        }
+
+        .resistor .band.white:after {
+            background-color: white;
+        }
+
+        .resistor .band.gold:after {
+            background-color: gold;
+        }
+
+        .resistor .band.silver:after {
+            background-color: silver;
+        }
+
+        .resistor .band.pink:after {
+            background-color: pink;
+        }
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+/*media queires for making the page responive*/
+/*For mobile devices with width of screen < 640px*/
+@media only screen and (max-width: 640px) and (min-width: 450px) {
+
+    resistorBlock {
+        text-align: center;
+    }
+
+    .resultClass {
+        align-self: center;
+        text-align: center;
+        align-content: center;
+        vertical-align: bottom;
+        font-size: 30px;
+        font-weight: bold;
+        color: darkslategray;
+        display: flex;
+    }
+
+    .resistor .wire {
+        width: 20px;
+        height: 10px;
+        margin-bottom: 35px;
+        background-color: silver;
+    }
+
+    .resistor > * {
+        width: 60px;
+        height: 70px;
+    }
+
+    .resistor .left {
+        width: 30px;
+        height: 75px;
+        border-radius: 100% / 50%;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+
+    .resistor .right {
+        width: 30px;
+        height: 75px;
+        border-radius: 100% / 50%;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+
+    .resistor .leftconnector {
+        border-bottom: 6px solid white;
+        border-top: 6px solid white;
+        border-left: 25px solid burlywood;
+        height: 75px;
+        width: 0;
+    }
+
+    .resistor .rightconnector {
+        border-bottom: 6px solid white;
+        border-top: 6px solid white;
+        border-right: 25px solid burlywood;
+        height: 75px;
+        width: 0;
+    }
+
+    .resistor .band1 {
+        position: relative;
+        height: 75px;
+        width: 20px;
+    }
+
+        .resistor .band1:after {
+            content: ' ';
+            position: absolute;
+            left: .8em;
+            width: 10px;
+            height: 75px;
+        }
+
+    .resistor .band {
+        width: 30px;
+        height: 63px;
+        margin-bottom: 6px;
+    }
+
+        .resistor .band:after {
+            height: 63px !important;
+            width: 10px;
+        }
+
+    .drpClass {
+        flex-direction: column !important;
+        text-align: center;
+        align-self: center;
+    }
+
+        .drpClass div {
+            text-align: center;
+            width: 100% !important;
+        }
+
+
+
+    .BandLabelText {
+        flex-direction: column !important;
+    }
+}
+
+/*For mobile devices with width of screen < 340px*/
+@media only screen and (max-width: 450px) and (min-width: 100px) {
+    .resultClass {
+        align-self: center;
+        text-align: center;
+        align-content: center;
+        vertical-align: bottom;
+        font-size: 20px;
+        font-weight: bold;
+        color: darkslategray;
+        display: flex;
+    }
+
+    .resistor {
+        text-align: center;
+    }
+
+        .resistor .wire {
+            width: 8px;
+            height: 5px;
+            margin-bottom: 25px;
+            background-color: silver;
+        }
+
+        .resistor > * {
+            width: 60px;
+            height: 70px;
+        }
+
+        .resistor .left {
+            width: 20px;
+            height: 55px;
+            border-radius: 100% / 50%;
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+
+        .resistor .right {
+            width: 20px;
+            height: 55px;
+            border-radius: 100% / 50%;
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+        }
+
+        .resistor .leftconnector {
+            border-bottom: 6px solid white;
+            border-top: 6px solid white;
+            border-left: 25px solid burlywood;
+            height: 55px;
+            width: 0;
+        }
+
+        .resistor .rightconnector {
+            border-bottom: 6px solid white;
+            border-top: 6px solid white;
+            border-right: 25px solid burlywood;
+            height: 55px;
+            width: 0;
+        }
+
+        .resistor .band1 {
+            position: relative;
+            height: 55px;
+            width: 16px;
+        }
+
+            .resistor .band1:after {
+                content: ' ';
+                position: absolute;
+                left: .8em;
+                width: 8px;
+                height: 55px;
+            }
+
+        .resistor .band {
+            width: 22px !important;
+            height: 43px !important;
+            margin-bottom: 6px;
+        }
+
+            .resistor .band:after {
+                width: 8px !important;
+                height: 43px !important;
+            }
+
+    .drpClass {
+        flex-direction: column !important;
+        text-align: center;
+        align-self: center;
+    }
+
+        .drpClass div {
+            width: 100% !important;
+            text-align: center;
+        }
+}

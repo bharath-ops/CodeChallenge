@@ -1,0 +1,53 @@
+﻿@model ResistanceCalculator.Web.Models.ColorCodes
+
+
+<div class="Container">
+
+    <div id="divResult" class="resultClass">
+        <div id="divError" class="error"></div>
+        <!--Resistance Value-->
+        <div id="divResistanceValue">
+            0Ω            
+        </div>
+    </div>
+    <!--Resistor Image-->
+    <div class="resistor">
+        <div class="wire"></div>
+        <div class="left"></div>
+        <div id="divBandFirst" class="band1"></div>
+        <div class="leftconnector"></div>
+        <div id="divBandSecond" class="band"></div>
+        <div id="divBandThird" class="band"></div>
+        <div id="divBandFourth" class="band"></div>
+        <div class="rightconnector"></div>
+        <div class="band1"></div>
+        <div class="right"></div>
+        <div class="wire"></div>
+    </div>
+
+    <!--Color code dropdown lists-->
+    <div class="drpClass">
+        <div>
+            @Html.Label("BandA", "1st Digit", htmlAttributes: new { @class = "BandLabelText" })
+            @Html.DropDownListFor(m => m.SignificantFigure, new SelectList(Model.SignificantFigure, "Key", "Value"), htmlAttributes: new { @class = "form-control", id = "drpFirstBand" })
+        </div>
+        <div>
+            @Html.Label("BandB", "2nd Digit", htmlAttributes: new { @class = "BandLabelText" })
+            @Html.DropDownListFor(m => m.SignificantFigure, new SelectList(Model.SignificantFigure, "Key", "Value"), htmlAttributes: new { @class = "form-control", id = "drpSecondBand" })
+        </div>
+        <div>
+            @Html.Label("BandC", "Multiplier", htmlAttributes: new { @class = "BandLabelText" })
+            @Html.DropDownListFor(m => m.Multiplier, new SelectList(Model.Multiplier, "Key", "Value"), htmlAttributes: new { @class = "form-control", id = "drpThirdBand" })
+        </div>
+        <div>
+            @Html.Label("BandD", "Tolerance", htmlAttributes: new { @class = "BandLabelText" })
+            @Html.DropDownListFor(m => m.Tolerance, new SelectList(Model.Tolerance, "Key", "Value.Item1"), htmlAttributes: new { @class = "form-control", id = "drpFourthBand" })
+        </div>
+    </div>
+
+</div>
+
+@section Scripts{
+    <script src="~/Scripts/ResistanceCalculator.js"></script>
+    @Scripts.Render("~/bundles/jqueryval")
+}
